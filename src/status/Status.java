@@ -5,7 +5,7 @@
  */
 package status;
 
-import java.util.Scanner;
+import status.StausUser.Range;
 
 /** This class takes String input from user 
  * and calls method statusDetail to print the 
@@ -23,11 +23,15 @@ public class Status {
      */
     public static void main(String[] args)
     {
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the user status code (zero,one,two,three) in string");
-    String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+   
+    StausUser ZERO = new StausUser(Range.ZERO);
+    ZERO.StausDetails();
+    StausUser ONE = new StausUser(Range.ONE);
+    ONE.StausDetails();
+    StausUser TWO = new StausUser(Range.TWO);
+    TWO.StausDetails();
+    StausUser THREE = new StausUser(Range.THREE);
+    THREE.StausDetails();
     }
     
 }
